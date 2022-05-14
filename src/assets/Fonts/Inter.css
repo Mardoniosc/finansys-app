@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'InterLT';
+  font-style: normal;
+  font-weight: 300;
+  src: url('Inter-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'InterLT';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Inter-LT.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'InterLT';
+  font-style: normal;
+  font-weight: 500;
+  src: url('Inter-Bold.ttf') format('truetype');
+}
