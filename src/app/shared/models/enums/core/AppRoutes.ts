@@ -1,8 +1,9 @@
 export enum AppRotas {
-  CATEGORIA = 'categoria',
+  CATEGORY = 'category',
   HOME = 'home',
-  LANCAMENTO = 'lancamento',
+  ENTRY = 'entry',
   LOGIN = 'login',
   MOBILE = 'mobile',
-  USUARIO = 'usuario',
+  REPORT = 'report',
+  PROFILE = 'profile',
 }
