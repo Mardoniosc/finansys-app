@@ -1,0 +1,44 @@
+button {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  border: none;
+
+  margin-left: 24px;
+  margin-right: 24px;
+
+  border-radius: 12px;
+
+  background: none;
+  border: 2px solid #009f18;
+  border-radius: 12px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Gradiente/01 */
+
+  background: linear-gradient(135deg, #009f18 0%, #004a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

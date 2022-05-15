@@ -18,16 +18,7 @@ body {
   // width: 100%;
 }
 body {
-  margin: 0;
   background: url(./assets/IMG/background_app.png) no-repeat center center;
-}
-
-* {
-  font-family: Inter, sans-serif;
-}
-
-.img-fundo {
-
   display: block;
   width: 100vw;
   height: 100vh;
@@ -35,3 +26,107 @@ body {
   margin: 0;
   background-size: cover;
 }
+
+* {
+  font-family: Inter, sans-serif;
+}
+
+.img-fundo {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+}
+
+.logo-login {
+  position: relative;
+  width: 145px;
+  height: 140px;
+  text-align: center;
+}
+
+.titulo-login {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+
+  /* Neutras/Branco */
+
+  color: #ffffff;
+}
+
+.sub-titulo-login {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.primeiro-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+
+  height: 48px;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  background: #211d28;
+  border: 2px solid #474053;
+  border-radius: 12px 12px 0px 0px;
+}
+
+input, input:focus {
+  background-color: #211d28;
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+  color: #fff;
+}
+
+.ultimo-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+
+  height: 48px;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  background: #211d28;
+  border: 2px solid #474053;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.meio-input {
+  border-radius: 0px;
+}
+
+
+.separador {
+  position: relative;
+  transform: translateX(50%);
+  opacity: 0.2;
+  border: 1px solid #efefff;
+  text-align: center;
+  margin: 40px 24px;
+  width: 40%;
+}
+
+
