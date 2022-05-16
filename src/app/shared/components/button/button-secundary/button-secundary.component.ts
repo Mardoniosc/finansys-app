@@ -19,6 +19,9 @@ export class ButtonSecundaryComponent implements OnInit {
   @Input('largura')
   public largura: string = `100%`;
 
+  @Input('cor')
+  public cor: string = 'verde';
+
   public estilo = {};
 
   constructor() {}

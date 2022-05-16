@@ -1,6 +1,15 @@
 <div class="footer-menu">
-  <img [ngClass]="{'menu-ativo' : ativarMenu == 'relatorio'}" src="assets/Icons/Lineado/rank.svg" [routerLink]="['/mobile/report']"  alt="">
-  <img [ngClass]="{'menu-ativo' : ativarMenu == 'categoria'}" src="assets/Icons/Lineado/grid1.svg" [routerLink]="['/mobile/category']" alt="">
-  <img [ngClass]="{'menu-ativo' : ativarMenu == 'lancamento'}" src="assets/Icons/Lineado/logo_menu.svg" [routerLink]="['/mobile/entry']" alt="">
-  <img [ngClass]="{'menu-ativo' : ativarMenu == 'perfil'}" src="assets/Icons/Lineado/user.svg" [routerLink]="['/mobile/profile']" alt="">
+
+  <img *ngIf="ativarMenu !== 'relatorio'" src="assets/Icons/Lineado/rank.svg" [routerLink]="['/mobile/report']"  alt="">
+  <img *ngIf="ativarMenu === 'relatorio'" class="menu-ativo" src="assets/Icons/Lineado/rank-ativo.svg" [routerLink]="['/mobile/report']"  alt="">
+
+  <img *ngIf="ativarMenu !== 'categoria'" src="assets/Icons/Lineado/grid1.svg" [routerLink]="['/mobile/category']" alt="">
+  <img *ngIf="ativarMenu === 'categoria'" class="menu-ativo" src="assets/Icons/Lineado/grid1-ativo.svg" [routerLink]="['/mobile/category']" alt="">
+
+  <img *ngIf="ativarMenu !== 'lancamento'" src="assets/Icons/Lineado/logo-menu.svg" [routerLink]="['/mobile/entry']" alt="">
+  <img *ngIf="ativarMenu === 'lancamento'" class="menu-ativo" src="assets/Icons/Lineado/logo-menu-ativo.svg" [routerLink]="['/mobile/entry']" alt="">
+
+  <img *ngIf="ativarMenu !== 'perfil'" src="assets/Icons/Lineado/user.svg" [routerLink]="['/mobile/profile']" alt="">
+  <img *ngIf="ativarMenu === 'perfil'" class="menu-ativo" src="assets/Icons/Lineado/user-ativo.svg" [routerLink]="['/mobile/profile']" alt="">
+
 </div>

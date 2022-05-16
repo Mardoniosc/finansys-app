@@ -6,6 +6,10 @@ import { ButtonComponent } from './components/button/button.component';
 import { ButtonSecundaryComponent } from './components/button/button-secundary/button-secundary.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MoedaPipe } from '../core/pipes/moeda.pipe';
+import { CpfPipe } from '../core/pipes/cpf.pipe';
+import { CepPipe } from '../core/pipes/cep.pipe';
+import { ItemListaComponent } from './components/item-lista/item-lista.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +17,12 @@ import { FooterComponent } from './components/footer/footer.component';
     ButtonSecundaryComponent,
     HeaderComponent,
     FooterComponent,
+    ItemListaComponent,
+
+    //PIPES
+    MoedaPipe,
+    CpfPipe,
+    CepPipe,
   ],
   imports: [CommonModule, SharedRoutingModule],
   exports: [
@@ -20,6 +30,12 @@ import { FooterComponent } from './components/footer/footer.component';
     ButtonSecundaryComponent,
     HeaderComponent,
     FooterComponent,
+    ItemListaComponent,
+
+    //PIPES
+    MoedaPipe,
+    CpfPipe,
+    CepPipe,
   ],
 })
 export class SharedModule {}

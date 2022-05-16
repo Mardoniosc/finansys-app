@@ -15,11 +15,95 @@
 </div>
 
 <div class="button-div mt-5">
-  <app-button titulo="Gerar Relatório" [routerLink]="['/mobile/report']" ></app-button>
+  <app-button titulo="Gerar Relatório" (click)="gerarRelatorio()"></app-button>
 </div>
 
-<div>
+<div *ngIf="relatorioGerado">
+
   <p class="titulo">Visão Geral</p>
+
+  <app-item-lista
+    titulo="Receita"
+    valor="R$ 10.259,00"
+    tipo="receita"
+    posicao="primeiro"
+    iconecirculo="assets/Icons/Lineado/circulo-verde.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+    titulo="Despesa"
+    valor="R$ 10.259,00"
+    tipo="despesa"
+    iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+    titulo="Saldo"
+    valor="R$ 10.259,00"
+    tipo="saldo"
+    posicao="ultimo"
+    iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
+  ></app-item-lista>
+
+  <hr class="separador"/>
+
+  <p class="titulo">Receita</p>
+
+  <app-item-lista
+    titulo="Mardonio"
+    valor="R$ 3.500,00"
+    tipo="receita"
+    posicao="primeiro"
+    iconecirculo="assets/Icons/Lineado/circulo-verde.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+    titulo="Vaneide"
+    valor="R$ 6.529,00"
+    tipo="receita"
+    iconecirculo="assets/Icons/Lineado/circulo-verde.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+    titulo="Alimentação"
+    valor="R$ 650,00"
+    tipo="receita"
+    posicao="ultimo"
+    iconecirculo="assets/Icons/Lineado/circulo-verde.svg"
+  ></app-item-lista>
+
+  <hr class="separador"/>
+
+  <p class="titulo">Despesas</p>
+
+  <app-item-lista
+    titulo="Mardonio"
+    valor="R$ 3.500,00"
+    tipo="despesa"
+    posicao="primeiro"
+    iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+    titulo="Vaneide"
+    valor="R$ 6.529,00"
+    tipo="despesa"
+    iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+  ></app-item-lista>
+
+  <app-item-lista
+  titulo="Alimentação"
+  valor="R$ 650,00"
+  tipo="despesa"
+  posicao="ultimo"
+  iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+  ></app-item-lista>
+
+  <div class="button-div mt-2">
+    <app-button-secundary cor="vermelho" titulo="Carregar mais - 3 / 30"></app-button-secundary>
+  </div>
 </div>
 
-<app-footer menu="relatorio" ></app-footer>
+
+<app-footer menu="relatorio"></app-footer>
+

@@ -1,7 +1,8 @@
+@import "src/styles/cores.scss";
+
 button {
   border-radius: 12px;
   background: none;
-  border: 2px solid #009f18;
   border-radius: 12px;
 
   font-family: "Inter";
@@ -9,16 +10,33 @@ button {
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
-  /* identical to box height */
-
   text-align: center;
 
-  /* Gradiente/01 */
+}
 
-  background: linear-gradient(135deg, #009f18 0%, #004a00 100%);
+.verde {
+  border: 2px solid $primaria-verde-500;
+  background: linear-gradient(135deg, $primaria-verde-500 0%, $primaria-verde-900 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
 
+.vermelho {
+  border: 2px solid $primaria-Vermelha-3;
+  background: linear-gradient(135deg, $primaria-Vermelha-1 0%, $primaria-Vermelha-3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.azul {
+  border: 2px solid $primaria-Azul-3;
+  background: linear-gradient(135deg, $primaria-Azul-2 0%, $primaria-Azul-1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

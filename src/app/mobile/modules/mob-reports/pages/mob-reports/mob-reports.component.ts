@@ -7,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobReportsComponent implements OnInit {
 
-  imagemLogo = 'src/assets/Icons/log_header.png';
+  receita = "R$ 10.679,00";
+  despesa = "R$ 6764,22";
+  saldo = "R$ 3.879,22";
+
+  relatorioGerado = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  gerarRelatorio() {
+    this.relatorioGerado = true;
   }
 
 }

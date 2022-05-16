@@ -2,6 +2,7 @@
   type="button"
   [ngStyle]="estilo"
   [disabled]="disabled"
+  [ngClass]="{verde: cor == 'verde', vermelho: cor == 'vermelho', azul: cor == 'azul'}"
 >
   <b>{{ titulo }}</b>
 </button>
