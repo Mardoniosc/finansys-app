@@ -17,7 +17,7 @@ export class ButtonComponent implements OnInit {
   public altura: string = `48px`;
 
   @Input('largura')
-  public largura: string = `342px`;
+  public largura: string = `100%`;
 
   public estilo = {};
 

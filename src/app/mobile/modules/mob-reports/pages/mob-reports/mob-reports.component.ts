@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobReportsComponent implements OnInit {
 
+  imagemLogo = 'src/assets/Icons/log_header.png';
   constructor() { }
 
   ngOnInit(): void {

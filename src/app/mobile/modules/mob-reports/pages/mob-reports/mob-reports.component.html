@@ -1,1 +1,25 @@
-<p>mob-reports works!</p>
+<app-header titulo="Relatórios"></app-header>
+
+<div class="opcoes-relatorio">
+  <select name="mes" id="mes">
+    <option disabled selected value="1">Mês</option>
+    <option value="1">Janeiro</option>
+    <option value="2">Fevereiro</option>
+  </select>
+
+  <select name="ano" id="ano">
+    <option disabled selected value="1">Ano</option>
+    <option value="1">2019</option>
+    <option value="2">2020</option>
+  </select>
+</div>
+
+<div class="button-div mt-5">
+  <app-button titulo="Gerar Relatório" [routerLink]="['/mobile/report']" ></app-button>
+</div>
+
+<div>
+  <p class="titulo">Visão Geral</p>
+</div>
+
+<app-footer menu="relatorio" ></app-footer>
