@@ -1,4 +1,53 @@
 <app-header titulo="Lançamentos"></app-header>
 
+<div class="pesquisar mb-4">
+  <small>Editando: Gás de Cozinha</small>
+</div>
+
+<div class="opcoes-relatorio mb-3">
+  <select class="despesa-pagamento" name="mes" id="mes">
+    <option value="1">Despesa</option>
+    <option value="2">Receita</option>
+  </select>
+
+  <select class="despesa-pagamento" name="ano" id="ano">
+    <option value="1">Pago</option>
+    <option value="2">Pendente</option>
+  </select>
+</div>
+
+<div class="primeiro-input">
+  <img src="assets/Icons/Lineado/grid2.svg" height="28" alt="">
+  <input type="text" class="login-usuario" placeholder="Lançamento" autocomplete="off">
+</div>
+<div class="primeiro-input meio-input">
+  <img src="assets/Icons/Lineado/logo-menu.svg" height="28" alt="">
+  <input type="email" class="login-usuario" placeholder="Valor" autocomplete="off">
+</div>
+<div class="primeiro-input meio-input">
+  <img src="assets/Icons/Calendar Alt.svg" alt="">
+  <input type="email" class="login-usuario" placeholder="Data" autocomplete="off">
+</div>
+
+<div class="ultimo-input">
+  <img src="assets/Icons/Lineado/pen-inativo.svg" alt="">
+  <input type="email" class="login-usuario" placeholder="Descrição" autocomplete="off">
+</div>
+
+<div class="categoria mt-3 mb-5">
+  <select style="width: 100%;" name="categoria" id="categoria">
+      <option value="1">Moradia</option>
+      <option value="2">Lazer</option>
+      <option value="3">Saúde</option>
+      <option value="4">Transporte</option>
+  </select>
+</div>
+
+
+<div class="acoes mt-4">
+  <app-button-secundary titulo="Cancelar" cor="azul" [routerLink]="['/mobile/entry']"></app-button-secundary>
+  <app-button-secundary titulo="Salvar" [routerLink]="['/mobile/entry']"></app-button-secundary>
+</div>
+
 
 <app-footer menu="lancamento"></app-footer>
