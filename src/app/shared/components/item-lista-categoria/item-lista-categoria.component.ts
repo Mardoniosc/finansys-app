@@ -1,20 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-item-lista',
-  templateUrl: './item-lista.component.html',
-  styleUrls: ['./item-lista.component.scss']
+  selector: 'app-item-lista-categoria',
+  templateUrl: './item-lista-categoria.component.html',
+  styleUrls: ['./item-lista-categoria.component.scss']
 })
-export class ItemListaComponent implements OnInit {
+export class ItemListaCategoriaComponent implements OnInit {
 
   @Input('titulo')
   public titulo: string = '';
-
-  @Input('valor')
-  public valor: string = '';
-
-  @Input('tipo')
-  public tipo: string = '';
 
   @Input('posicao')
   public posicao: string = '';
@@ -27,9 +21,6 @@ export class ItemListaComponent implements OnInit {
 
   @Input('subtitulotexto')
   public subtitulotexto: string = '';
-
-  @Input('categoria')
-  public categoria: string = '';
 
   constructor() { }
 

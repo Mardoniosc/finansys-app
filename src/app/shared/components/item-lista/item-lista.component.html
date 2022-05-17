@@ -1,7 +1,10 @@
 <div class="item" [ngClass]="{ultimo: posicao == 'ultimo', primeiro: posicao == 'primeiro'}">
   <div class="titulo-combo">
     <img [src]="iconecirculo" alt="">
-    <p class="titulo">{{ titulo }}</p>
+    <div class="titulo-subtitulo">
+      <label class="titulo">{{ titulo }}</label>
+      <small class="categoria" *ngIf="categoria">{{ categoria }}</small>
+    </div>
   </div>
   <p [ngClass]="{'valor-positivo': tipo == 'receita', 'valor-negativo': tipo == 'despesa', 'valor-neutro': tipo == 'saldo'}">{{ valor }}</p>
 </div>

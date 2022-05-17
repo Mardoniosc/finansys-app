@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   padding: 12px 16px 12px 12px;
 
-  height: 48px;
+  height: 60px;
   margin-left: 24px;
   margin-right: 24px;
 
@@ -23,6 +23,11 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+}
+
+.iconecirculo {
+  height: 24px;
+  width: 24px;
 }
 
 .titulo-combo {
@@ -57,13 +62,7 @@
   border-radius: 0px 0px 12px 12px;
 }
 
-.titulo-subtitulo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.categoria {
+.subtitulo {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -74,16 +73,16 @@
 
   color: #5eebff;
   margin-left: 12px;
+
 }
 
-label {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  /* identical to box height */
-  text-align: center;
-  color: #ffffff;
+.titulo-subtitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
+img {
+  cursor: pointer;
+}

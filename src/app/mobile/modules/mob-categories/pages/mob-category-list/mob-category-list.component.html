@@ -1,4 +1,49 @@
 <app-header titulo="Categorias"></app-header>
 
+<div class="pesquisar">
+  <img src="assets/Icons/Lineado/search.svg" alt="">
+  <input type="text" class="login-usuario" placeholder="Pesquisar nome categoria" autocomplete="off">
+</div>
+
+<div class="button-div mt-5">
+  <app-button titulo="+ Nova Categoria" [routerLink]="['/mobile/category/new']"></app-button>
+</div>
+<hr class="separador" />
+<p class="titulo-categoria">Lista de Categorias</p>
+
+<app-item-lista-categoria
+  titulo="Salário"
+  [subtitulo]="true"
+  subtitulotexto="Recebimento de salário"
+  posicao="primeiro"
+  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
+></app-item-lista-categoria>
+
+<app-item-lista-categoria
+  titulo="Lazer"
+  [subtitulo]="true"
+  subtitulotexto="Cinema, Parques, praia, etc."
+  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
+></app-item-lista-categoria>
+
+<app-item-lista-categoria
+  titulo="Moradia"
+  [subtitulo]="true"
+  subtitulotexto="Pagamentos de contas da Casa"
+  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
+></app-item-lista-categoria>
+
+<app-item-lista-categoria
+  titulo="Saúde"
+  [subtitulo]="true"
+  subtitulotexto="Plano de Saúde e Remédios"
+  posicao="ultimo"
+  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
+></app-item-lista-categoria>
+
+<div class="button-div mt-4">
+  <app-button-secundary titulo="Carregar Mais Categorias - 4 / 15"></app-button-secundary>
+</div>
+
 
 <app-footer menu="categoria"></app-footer>

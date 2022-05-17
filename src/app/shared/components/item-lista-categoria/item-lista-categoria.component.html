@@ -1,0 +1,13 @@
+<div class="item" [ngClass]="{ultimo: posicao == 'ultimo', primeiro: posicao == 'primeiro'}">
+  <div class="titulo-combo">
+    <img [src]="iconecirculo" class="iconecirculo" alt="">
+    <div class="titulo-subtitulo">
+      <label class="titulo">{{ titulo }}</label>
+      <small class="subtitulo" *ngIf="subtitulo">{{ subtitulotexto }}</small>
+    </div>
+  </div>
+  <div class="acoes-categoria">
+    <img style="margin-right: 12px;" src="assets/Icons/Lineado/pen.svg" alt="">
+    <img src="assets/Icons/Lineado/close.svg" alt="">
+  </div>
+</div>

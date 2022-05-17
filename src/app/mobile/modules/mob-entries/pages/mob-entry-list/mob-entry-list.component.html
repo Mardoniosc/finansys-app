@@ -1,4 +1,53 @@
 <app-header titulo="Lançamentos"></app-header>
 
+<div class="pesquisar">
+  <img src="assets/Icons/Lineado/search.svg" alt="">
+  <input type="text" class="login-usuario" placeholder="Pesquisar nome do lançamento" autocomplete="off">
+</div>
+
+<div class="button-div mt-5">
+  <app-button titulo="+ Novo Lançamento" [routerLink]="['/mobile/entry/new']"></app-button>
+</div>
+<hr class="separador" />
+<p class="titulo-lancamento">Lista de Lançamentos</p>
+
+
+<app-item-lista-lancamento
+  titulo="Cinema"
+  [subtitulo]="true"
+  subtitulotexto="28/11/2020"
+  posicao="primeiro"
+  categoria="Lazer"
+  iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+></app-item-lista-lancamento>
+
+<app-item-lista-lancamento
+  titulo="Uber"
+  [subtitulo]="true"
+  subtitulotexto="21/11/2020"
+  categoria="Transporte"
+  iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+></app-item-lista-lancamento>
+
+<app-item-lista-lancamento
+  titulo="Gás de Cozinha"
+  [subtitulo]="true"
+  subtitulotexto="25/11/2020"
+  categoria="Moradia"
+  iconecirculo="assets/Icons/Lineado/circulo-vermelho.svg"
+></app-item-lista-lancamento>
+
+<app-item-lista-lancamento
+  titulo="Salário Mardonio"
+  [subtitulo]="true"
+  subtitulotexto="01/11/2020"
+  posicao="ultimo"
+  categoria="Salário"
+  iconecirculo="assets/Icons/Lineado/circulo-verde.svg"
+></app-item-lista-lancamento>
+
+<div class="button-div mt-4">
+  <app-button-secundary titulo="Carregar Mais lançamentos - 4 / 53"></app-button-secundary>
+</div>
 
 <app-footer menu="lancamento"></app-footer>

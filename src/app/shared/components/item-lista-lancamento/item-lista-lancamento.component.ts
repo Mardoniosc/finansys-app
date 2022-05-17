@@ -1,20 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-item-lista',
-  templateUrl: './item-lista.component.html',
-  styleUrls: ['./item-lista.component.scss']
+  selector: 'app-item-lista-lancamento',
+  templateUrl: './item-lista-lancamento.component.html',
+  styleUrls: ['./item-lista-lancamento.component.scss']
 })
-export class ItemListaComponent implements OnInit {
+export class ItemListaLancamentoComponent implements OnInit {
 
   @Input('titulo')
   public titulo: string = '';
-
-  @Input('valor')
-  public valor: string = '';
-
-  @Input('tipo')
-  public tipo: string = '';
 
   @Input('posicao')
   public posicao: string = '';

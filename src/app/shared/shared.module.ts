@@ -10,6 +10,8 @@ import { MoedaPipe } from '../core/pipes/moeda.pipe';
 import { CpfPipe } from '../core/pipes/cpf.pipe';
 import { CepPipe } from '../core/pipes/cep.pipe';
 import { ItemListaComponent } from './components/item-lista/item-lista.component';
+import { ItemListaCategoriaComponent } from './components/item-lista-categoria/item-lista-categoria.component';
+import { ItemListaLancamentoComponent } from './components/item-lista-lancamento/item-lista-lancamento.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ItemListaComponent } from './components/item-lista/item-lista.component
     HeaderComponent,
     FooterComponent,
     ItemListaComponent,
+    ItemListaCategoriaComponent,
+    ItemListaLancamentoComponent,
 
     //PIPES
     MoedaPipe,
@@ -31,6 +35,8 @@ import { ItemListaComponent } from './components/item-lista/item-lista.component
     HeaderComponent,
     FooterComponent,
     ItemListaComponent,
+    ItemListaCategoriaComponent,
+    ItemListaLancamentoComponent,
 
     //PIPES
     MoedaPipe,
