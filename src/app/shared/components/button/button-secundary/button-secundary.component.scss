@@ -1,5 +1,3 @@
-@import "src/styles/cores.scss";
-
 button {
   border-radius: 12px;
   background: none;
@@ -15,28 +13,32 @@ button {
 }
 
 .verde {
-  border: 2px solid $primaria-verde-500;
-  background: linear-gradient(135deg, $primaria-verde-500 0%, $primaria-verde-900 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  border: 2px solid #009F18;
+  b {
+    background: linear-gradient(135deg, #009F18 0%, #004A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
+
 .vermelho {
-  border: 2px solid $primaria-Vermelha-3;
-  background: linear-gradient(135deg, $primaria-Vermelha-1 0%, $primaria-Vermelha-3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  border: 2px solid  #CF0303;
+  b {
+    background: linear-gradient(135deg, #FF0303 0%, #CF0303 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
 .azul {
-  border: 2px solid $primaria-Azul-3;
-  background: linear-gradient(135deg, $primaria-Azul-2 0%, $primaria-Azul-1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  border: 2px solid #5EEBFF;
+  b {
+    background: linear-gradient(135deg, #00BEFB 0%, #0084CE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
