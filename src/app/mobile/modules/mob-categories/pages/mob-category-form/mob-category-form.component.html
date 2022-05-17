@@ -1,4 +1,20 @@
 <app-header titulo="Categorias"></app-header>
 
+<p class="titulo-categoria mb-4 mt-3">Nova Categoria</p>
+
+<div class="primeiro-input">
+  <input type="text" class="login-usuario" placeholder="Nome Categoria" autocomplete="off">
+</div>
+
+<div class="ultimo-input mb-2">
+  <input type="text" class="login-usuario" placeholder="Descrição Categoria" autocomplete="off">
+</div>
+
+
+<div class="acoes mt-5">
+  <app-button-secundary titulo="Voltar" cor="azul" [routerLink]="['/mobile/category']"></app-button-secundary>
+  <app-button-secundary titulo="Salvar" [routerLink]="['/mobile/category']"></app-button-secundary>
+</div>
+
 
 <app-footer menu="categoria"></app-footer>

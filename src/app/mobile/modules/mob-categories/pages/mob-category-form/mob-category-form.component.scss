@@ -1,0 +1,23 @@
+.titulo-categoria {
+  margin-left: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 24px;
+
+  color: #ffffff;
+}
+
+.acoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+app-button-secundary {
+  width: 45%;
+}

@@ -16,8 +16,8 @@ const routes: Routes = [
       import('./mobile/mobile.module').then((m) => m.MobileModule),
   },
   {
-    path: '',
-    redirectTo: '',
+    path: '**',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
 ];
