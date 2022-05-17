@@ -1,0 +1,64 @@
+@import "src/styles/tela-confirmacao.scss";
+
+.pesquisar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px 8px 8px;
+  gap: 8px;
+
+  height: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  background: rgba(239, 239, 255, 0.1);
+
+  border: 1px solid #474053;
+  border-radius: 5px;
+}
+
+input,
+input:focus {
+  background: none;
+  border: none;
+}
+
+label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 3px;
+  color: #ffffff;
+}
+
+small {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.detalhes {
+  display: flex;
+  color: aliceblue;
+  justify-content: space-between;
+  margin-left: 24px;
+  margin-right: 24px;
+  width: auto;
+}
+
+.meia-tela {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.tela {
+  display: flex;
+  flex-direction: column;
+}

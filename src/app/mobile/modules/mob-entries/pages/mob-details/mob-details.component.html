@@ -1,1 +1,53 @@
-<p>mob-details works!</p>
+<app-header titulo="Lançamentos"></app-header>
+
+<div class="pesquisar mb-5">
+  <small>Detalhes do Lançamento: Gás de Cozinha</small>
+</div>
+<div style="height: 45%;">
+  <div class="detalhes mb-3">
+    <div class="meia-tela">
+      <label>Tipo</label>
+      <small>Desesa</small>
+    </div>
+    <div class="meia-tela">
+      <label>Data</label>
+      <small>28/04/2022</small>
+    </div>
+  </div>
+
+  <div class="detalhes mb-3">
+    <div class="meia-tela">
+      <label>Valor</label>
+      <small>R$ 90,00</small>
+    </div>
+    <div class="meia-tela">
+      <label>Pago</label>
+      <small>Sim</small>
+    </div>
+  </div>
+
+  <div class="detalhes mb-3">
+    <div class="tela">
+      <label>Categoria</label>
+      <small>Moradia</small>
+    </div>
+  </div>
+  <div class="detalhes mb-3">
+    <div class="tela">
+      <label>Descrição</label>
+      <small>Botijão de gás</small>
+    </div>
+  </div>
+</div>
+
+
+<div class="button-div mt-4">
+  <app-button-secundary titulo="Editar" [routerLink]="['/mobile/entry/1/edit']"></app-button-secundary>
+</div>
+<div class="acoes mt-4">
+  <app-button-secundary titulo="Excluir" cor="vermelho" [routerLink]="['/mobile/entry/1/delete']"></app-button-secundary>
+  <app-button-secundary titulo="Voltar" cor="azul" [routerLink]="['/mobile/entry']"></app-button-secundary>
+</div>
+
+
+<app-footer menu="lancamento"></app-footer>
