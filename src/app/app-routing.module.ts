@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRotas } from './shared/models/enums/core/AppRoutes';
+import { LoggedGuard } from './shared/services/guard';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: AppRotas.MOBILE,
+    canActivate: [LoggedGuard],
     loadChildren: () =>
       import('./mobile/mobile.module').then((m) => m.MobileModule),
   },

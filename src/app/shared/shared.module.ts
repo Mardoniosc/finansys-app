@@ -12,6 +12,10 @@ import { CepPipe } from '../core/pipes/cep.pipe';
 import { ItemListaComponent } from './components/item-lista/item-lista.component';
 import { ItemListaCategoriaComponent } from './components/item-lista-categoria/item-lista-categoria.component';
 import { ItemListaLancamentoComponent } from './components/item-lista-lancamento/item-lista-lancamento.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService, UserLoggedService } from './services/autenticacao';
+import { StorageService } from './services';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,16 @@ import { ItemListaLancamentoComponent } from './components/item-lista-lancamento
     CpfPipe,
     CepPipe,
   ],
-  imports: [CommonModule, SharedRoutingModule],
+  imports: [
+    CommonModule,
+    SharedRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+
+  providers: [LoginService, UserLoggedService, StorageService],
+
   exports: [
     ButtonComponent,
     ButtonSecundaryComponent,
@@ -42,6 +55,11 @@ import { ItemListaLancamentoComponent } from './components/item-lista-lancamento
     MoedaPipe,
     CpfPipe,
     CepPipe,
+
+    //MODULES
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
 })
 export class SharedModule {}

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AppStorage } from '../models/enums/core/AppStorage';
+import { TokenUser } from '../models/local-user.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StorageService {
   constructor() {}

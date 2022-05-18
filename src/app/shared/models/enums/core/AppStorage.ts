@@ -1,3 +1,4 @@
 export enum AppStorage {
-  USUARIO = 'usuario',
+  USUARIO = '@corebase:user',
+  TOKEN_USER = '@corebase:token',
 }
