@@ -1,5 +1,5 @@
 <div class="header">
   <img class="logo-header" src="assets/Icons/logo_header.svg" alt="logo">
   <p class="titulo">{{ titulo }}</p>
-  <img class="logout-header" src="assets/Icons/Sair.svg" [routerLink]="['/login']" alt="logout">
+  <img class="logout-header" src="assets/Icons/Sair.svg" (click)="logout()" alt="logout">
 </div>

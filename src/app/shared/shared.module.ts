@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService, UserLoggedService } from './services/autenticacao';
 import { StorageService } from './services';
+import { UsuarioService } from './services/system/usuario.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { StorageService } from './services';
     FormsModule,
   ],
 
-  providers: [LoginService, UserLoggedService, StorageService],
+  providers: [LoginService, UserLoggedService, StorageService, UsuarioService],
 
   exports: [
     ButtonComponent,

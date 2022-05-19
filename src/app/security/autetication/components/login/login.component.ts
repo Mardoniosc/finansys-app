@@ -7,8 +7,12 @@ import { AppStorage } from 'src/app/shared/models/enums/core/AppStorage';
 import { TokenUser } from 'src/app/shared/models/local-user.model';
 import { Login } from 'src/app/shared/models/login.model';
 import { StorageService } from 'src/app/shared/services';
-import { LoginService, UserLoggedService } from 'src/app/shared/services/autenticacao';
+import {
+  LoginService,
+  UserLoggedService,
+} from 'src/app/shared/services/autenticacao';
 import { ToastrService } from 'ngx-toastr';
+import { UsuarioService } from 'src/app/shared/services/system/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +35,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private storageService: StorageService,
     private toastr: ToastrService,
+    private usuarioService: UsuarioService
   ) {}
 
   ngOnInit(): void {
@@ -59,7 +64,7 @@ export class LoginComponent implements OnInit {
 
   logar(): void {
     if (this.form.invalid) {
-      this.toastr.info("Campos de formulário inválidos!");
+      this.toastr.info('Campos de formulário inválidos!');
       return;
     }
 
@@ -73,23 +78,34 @@ export class LoginComponent implements OnInit {
             return;
           }
           this.loginService.successLogin(token);
-          this.localTokenUser = this.storageService.getItem(AppStorage.TOKEN_USER);
+          this.localTokenUser = this.storageService.getItem(
+            AppStorage.TOKEN_USER
+          );
           this.toastr.success('Login realizado com sucesso!');
           this.carregarDadosUserLoggado();
-
         },
         (err) => {
-          if(err.error) {
-            this.toastr.error(JSON.parse(err.error).message, 'Erro '  + JSON.parse(err.error).status);
+          if (err.error) {
+            this.toastr.error(
+              JSON.parse(err.error).message,
+              'Erro ' + JSON.parse(err.error).status
+            );
           }
-
         }
       )
     );
   }
 
   carregarDadosUserLoggado(): void {
-    this.storageService.setItem(AppStorage.USUARIO, { "usuario": "Mardonio", "status": 1 });
-    this.router.navigate([AppRotas.MOBILE, AppRotas.REPORT]);
+    // this.storageService.setItem(AppStorage.USUARIO, { "usuario": "Mardonio", "status": 1 });
+
+    this.usuarioService.getUserByEmail(this.localTokenUser.email).subscribe(
+      (data) => {
+        this.storageService.setItem(AppStorage.USUARIO, data);
+        this.router.navigate([AppRotas.MOBILE, AppRotas.REPORT]);
+      },
+      (err) =>
+        this.toastr.error('Erro ao buscar informações do usuário', 'Data error')
+    );
   }
 }

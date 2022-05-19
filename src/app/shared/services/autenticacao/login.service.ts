@@ -9,7 +9,7 @@ import { TokenUser } from '../../models/local-user.model';
 import { Login } from '../../models/login.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
   private readonly PATH: string = '/auth';
@@ -18,7 +18,7 @@ export class LoginService {
 
   constructor(
     private http: HttpClient,
-    private localStorangeService: StorageService,
+    private localStorangeService: StorageService
   ) {}
 
   logar(login: Login): Observable<any> {
@@ -41,7 +41,8 @@ export class LoginService {
   }
 
   logout(): void {
-    this.localStorangeService.setItem(AppStorage.TOKEN_USER, null);
+    this.localStorangeService.removeItem(AppStorage.TOKEN_USER);
+    this.localStorangeService.removeItem(AppStorage.USUARIO);
   }
 
   // forgot(email: Forgot): Observable<any> {
