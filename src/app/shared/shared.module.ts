@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService, UserLoggedService } from './services/autenticacao';
 import { StorageService } from './services';
 import { UsuarioService } from './services/system/usuario.service';
+import { CategoriaService } from './services/system/categoria.service';
+import { LancamentoService } from './services/system/lancamento.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,14 @@ import { UsuarioService } from './services/system/usuario.service';
     FormsModule,
   ],
 
-  providers: [LoginService, UserLoggedService, StorageService, UsuarioService],
+  providers: [
+    LoginService,
+    UserLoggedService,
+    StorageService,
+    UsuarioService,
+    CategoriaService,
+    LancamentoService,
+  ],
 
   exports: [
     ButtonComponent,
