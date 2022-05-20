@@ -1,19 +1,23 @@
 <app-header titulo="Categorias"></app-header>
 
-<p class="titulo-categoria mb-4 mt-3">Nova Categoria</p>
+<p class="titulo-categoria mb-4 mt-3">{{ pageTitle }}</p>
+<form [formGroup]="categoryForm">
+  <div class="primeiro-input">
+    <input type="text" class="login-usuario" formControlName="nome" placeholder="Nome Categoria" autocomplete="off">
+    <div class="text-danger" *ngIf="categoryForm.get('nome')?.invalid && categoryForm.get('nome')?.touched">
+      <div *ngIf="categoryForm.get('nome')?.errors?.['required']">Preenchimento Obrigatório</div>
+      <div *ngIf="categoryForm.get('nome')?.errors?.['minlength']">Deve ter no mínimo 2 caracteres</div>
+    </div>
+  </div>
 
-<div class="primeiro-input">
-  <input type="text" class="login-usuario" placeholder="Nome Categoria" autocomplete="off">
-</div>
-
-<div class="ultimo-input mb-2">
-  <input type="text" class="login-usuario" placeholder="Descrição Categoria" autocomplete="off">
-</div>
-
+  <div class="ultimo-input mb-2">
+    <input type="text" class="login-usuario" formControlName="descricao" placeholder="Descrição Categoria" autocomplete="off">
+  </div>
+</form>
 
 <div class="acoes mt-5">
   <app-button-secundary titulo="Voltar" cor="azul" [routerLink]="['/mobile/category']"></app-button-secundary>
-  <app-button-secundary titulo="Salvar" [routerLink]="['/mobile/category']"></app-button-secundary>
+  <app-button-secundary titulo="Salvar" (click)="submitForm()"></app-button-secundary>
 </div>
 
 

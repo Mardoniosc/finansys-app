@@ -1,10 +1,10 @@
 <div class="header">
   <img src="assets/Icons/Lineado/logo-menu-ativo.svg" class="mt-5" alt="">
-  <p>Tem Certeza que deseja excluir a categoria: Moradia ?</p>
+  <p>Tem Certeza que deseja excluir a categoria: {{ categoriaNome }} ?</p>
 
 </div>
 
 <div class="acoes mt-5">
   <app-button-secundary titulo="Cancelar" cor="azul" [routerLink]="['/mobile/category']"></app-button-secundary>
-  <app-button-secundary titulo="Confirmar" [routerLink]="['/mobile/category']"></app-button-secundary>
+  <app-button-secundary titulo="Confirmar" (click)="deleteCategory()"></app-button-secundary>
 </div>
