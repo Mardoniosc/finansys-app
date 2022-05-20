@@ -4,20 +4,23 @@
 <p class="titulo-login text-center">Finansys</p>
 <p class="sub-titulo-login text-center">Organize e gerencie suas finanças</p>
 
-<div class="primeiro-input">
-  <img src="assets/Icons/Lineado/user.svg" alt="" class="icon-usuario">
-  <input type="text" class="login-usuario" placeholder="Login" autocomplete="off">
-</div>
-<div class="ultimo-input" style="justify-content: space-between;">
-  <div style="display: flex;">
-    <img style="margin-right: 10px;" src="assets/Icons/Lineado/locker.svg" alt="locker">
-    <input type="password" placeholder="Senha" autocomplete="off">
+<form [formGroup]="form" novalidate>
+  <div class="primeiro-input">
+    <img src="assets/Icons/Lineado/user.svg" alt="" class="icon-usuario">
+    <input type="email" formControlName="login" class="login-usuario" placeholder="Login" autocomplete="off">
   </div>
-  <img class="" src="assets/Icons/Lineado/eye.svg" alt="">
-</div>
+  <div class="ultimo-input" style="justify-content: space-between;">
+    <div style="display: flex;">
+      <img style="margin-right: 10px;" src="assets/Icons/Lineado/locker.svg" alt="locker">
+      <input type="password" formControlName="senha" placeholder="Senha" autocomplete="off">
+    </div>
+    <img class="" src="assets/Icons/Lineado/eye.svg" alt="">
+  </div>
+</form>
+
 
 <div class="button-div mt-5">
-  <app-button titulo="Entrar" [routerLink]="['/mobile/report']" ></app-button>
+  <app-button titulo="Entrar" (click)="logar()"></app-button>
 </div>
 <hr class="separador"/>
 

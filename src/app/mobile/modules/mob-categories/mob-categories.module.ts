@@ -8,7 +8,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MobConfirmDelComponent } from './pages/mob-confirm-del/mob-confirm-del.component';
 
 @NgModule({
-  declarations: [MobCategoryListComponent, MobCategoryFormComponent, MobConfirmDelComponent],
+  declarations: [
+    MobCategoryListComponent,
+    MobCategoryFormComponent,
+    MobConfirmDelComponent,
+  ],
   imports: [CommonModule, MobCategoriesRoutingModule, SharedModule],
 })
 export class MobCategoriesModule {}
