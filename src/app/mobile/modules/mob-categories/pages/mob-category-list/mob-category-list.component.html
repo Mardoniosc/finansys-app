@@ -11,35 +11,17 @@
 <hr class="separador" />
 <p class="titulo-categoria">Lista de Categorias</p>
 
-<app-item-lista-categoria
-  titulo="Salário"
-  [subtitulo]="true"
-  subtitulotexto="Recebimento de salário"
-  posicao="primeiro"
-  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
-></app-item-lista-categoria>
+  <app-item-lista-categoria
+    *ngFor="let categoria of categorias; let first = first; let last = last"
+    [titulo]="categoria.nome"
+    [subtitulo]="true"
+    [subtitulotexto]="categoria.descricao"
+    [primeiro]="first"
+    [ultimo]="last"
+    [id]="categoria.id"
+  ></app-item-lista-categoria>
 
-<app-item-lista-categoria
-  titulo="Lazer"
-  [subtitulo]="true"
-  subtitulotexto="Cinema, Parques, praia, etc."
-  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
-></app-item-lista-categoria>
 
-<app-item-lista-categoria
-  titulo="Moradia"
-  [subtitulo]="true"
-  subtitulotexto="Pagamentos de contas da Casa"
-  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
-></app-item-lista-categoria>
-
-<app-item-lista-categoria
-  titulo="Saúde"
-  [subtitulo]="true"
-  subtitulotexto="Plano de Saúde e Remédios"
-  posicao="ultimo"
-  iconecirculo="assets/Icons/Lineado/circulo-azul.svg"
-></app-item-lista-categoria>
 
 <div class="button-div mt-4">
   <app-button-secundary titulo="Carregar Mais Categorias - 4 / 15"></app-button-secundary>

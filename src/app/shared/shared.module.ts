@@ -12,13 +12,14 @@ import { CepPipe } from '../core/pipes/cep.pipe';
 import { ItemListaComponent } from './components/item-lista/item-lista.component';
 import { ItemListaCategoriaComponent } from './components/item-lista-categoria/item-lista-categoria.component';
 import { ItemListaLancamentoComponent } from './components/item-lista-lancamento/item-lista-lancamento.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService, UserLoggedService } from './services/autenticacao';
 import { StorageService } from './services';
 import { UsuarioService } from './services/system/usuario.service';
 import { CategoriaService } from './services/system/categoria.service';
 import { LancamentoService } from './services/system/lancamento.service';
+import { Authinterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,8 @@ import { LancamentoService } from './services/system/lancamento.service';
     UsuarioService,
     CategoriaService,
     LancamentoService,
+
+    { provide: HTTP_INTERCEPTORS, useClass: Authinterceptor, multi: true },
   ],
 
   exports: [
